@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="utf-8">
+    <title> Beschlägeliste Editor</title>
+</head>
+<body>
+<h1>Beschlägeliste Editor</h1>
+<form action="beschlag.php" method="post">
+
+<!-- Allgemeine Infos -->
+
+    <h3>Allgemeine Informationen</h3>
+<p>Ausführung <input name="ausfuehrung" size="1" value="1"> Stück</p>
+    <table>
+        <tr><td>System</td></tr>
+        <tr><td>
+            <select name="system">
+                <option value="Forster presto 50">Forster presto 50</option>
+                <option value="Forster presto 50 E30">Forster presto 50 (E30)</option>
+                <option value="Forster presto 60">Forster presto 60</option>
+                <option value="Forster presto 60 E30">Forster presto 60 (E30)</option>
+                <option value="Forster fuego light EI30">Forster fuego light (EI30)</option>
+                <option value="Forster fuego light EI60">Forster fuego light (EI60)</option>
+                <option value="Forster unico">Forster Unico</option>
+                <option value="Forster unico EI30">Forster Unico (EI30)</option>
+            </select>
+        </td></tr>
+    </table>
+    <br>
+
+    <table>
+        <tr><td>Mit Beistoss und/oder Oberlicht?</td></tr>
+        <tr><td>
+            <select name="beistoss">
+                <option value="Nein">Nein</option>
+                <option value="Ja">Ja</option>
+            </select>
+        </td></tr>
+    </table>
+    <br>
+
+    <p><input type="radio" name="fluegel" value="1 fluegig" checked="checked"> 1 Flügig | <input type="radio" name="fluegel" value="2 fluegig"> 2 Flügig</p>
+    <p><input type="radio" name="din" value="DIN Links" checked="checked"> DIN Links | <input type="radio" name="din" value="DIN Rechts"> DIN Rechts</p>
+    <br>
+
+    <table>
+        <tr><td>Breite Gehflügel | </td><td>Breite Standflügel | </td><td>Höhe</td></tr>
+        <tr><td>
+            <input name="BreiteG" size="3">
+        </td><td>
+            <input name="BreiteS" size="3">
+        </td><td>
+            <input name="Hoehe" size="3">
+        </td></tr>
+    </table>
+
+    <br>
+
+    <table>
+        <tr><td>Widerstandsklasse</td></tr>
+        <tr><td>
+            <select name="RC">
+                <option value="Keine"> </option>
+                <option value="RC2">RC2</option>
+                <option value="RC3">RC3</option>
+            </select>
+        </td></tr>
+    </table>
+    <br><hr>
+
+
+<!-- Beschläge -->
+
+<h3>Beschläge</h3>
+
+<!-- Schloss Gehflügel -->
+<table>
+    <tr><td>Schloss Gehflügel</td><td>Panikfunktion</td><td>SVP Funktion</td><td>Dornmass</td></tr>
+    <tr><td>
+        <select name="schloss">
+            <option value="Einsteckschloss">Einsteckschloss</option>
+            <option value="Einsteckschloss mit oberer Verriegelung">Einsteckschloss mit oberer Verriegelung</option>
+            <option value="Mehrpunktschloss">Mehrpunktschloss</option>
+            <option value="Elektroschloss EFF-EFF 809NE">Elektroschloss EFF-EFF 809NE</option>
+            <option value="Motorschloss EFF-EFF 509NE">Motorschloss EFF-EFF 509NE</option>
+            <option value="Mehrpunkt Elektroschloss EFF-EFF 819NE">Mehrpunkt Elektroschloss EFF-EFF 819NE</option>
+            <option value="Mehrpunkt Motorschloss EFF-EFF 519NE">Mehrpunkt Motorschloss EFF-EFF 519NE</option>
+        </select>
+    </td><td>
+        <select name="panik">
+            <option value="ohne Panikfunktion"> </option>
+            <option value="Panikfunktion B">Panikfunktion B</option>
+            <option value="Panikfunktion E">Panikfunktion E</option>
+            <option value="Panikfunktion D">Panikfunktion D</option>
+        </select>
+    </td><td>
+        <select name="svp">
+            <option value=" "> </option>
+            <option value=", selbstverriegelt">SVP Funktion</option>
+        </select>
+    </td><td>
+        <select name="dornmass">
+            <option value="Dornmass 35mm">Dornmass 35mm</option>
+            <option value="Dornmass 40mm">Dornmass 40mm</option>
+            <option value="Dornmass 45mm">Dornmass 45mm</option>
+            <option value="Dornmass 50mm">Dornmass 50mm</option>
+            <option value="Dornmass 60mm">Dornmass 60mm</option>
+            <option value="Dornmass 80mm">Dornmass 80mm</option>
+            <option value="Dornmass 100mm">Dornmass 100mm</option>
+        </select>
+    </td></tr>
+</table>
+<br>
+
+<!-- Schloss Standflügel -->
+
+<table>
+    <tr><td>Schloss Standflügel</td></tr>
+    <tr><td>
+        <select name="schlossstand">
+            <option value="Kein"> </option>
+            <option value="Falztreibriegelschloss">Falztreibriegelschloss</option>
+            <option value="Kantenbascule">Kantenbascule</option>
+            <option value="Panik Gegenkasten">Panik Gegenkasten</option>
+        </select>
+    </td></tr>
+</table>
+<br>
+
+
+<!-- Elektrische Türöffner -->
+<table>
+    <tr><td>Elektrische Türöffner</td></tr>
+    <tr><td>
+        <select name="eloeffner">
+            <option value="Kein"> </option>
+            <option value="EFF-EFF 118, 24V, Fafix">EFF-EFF 118</option>
+            <option value="Fluchttüröffner EFF-EFF 331, 24V, RR, Fafix">Fluchttüröffner EFF-EFF 331</option>
+            <option value="Fluchttüröffner EFF-EFF 332, 24V, RR, Fafix">Fluchttüröffner EFF-EFF 332</option>
+        </select>
+    </td></tr>
+</table>
+<br>
+
+<!-- Band -->
+<table>
+    <tr><td>Bänder</td><td>Anzahl Bänder pro Flügel</td></tr>
+    <tr><td>
+        <select name="band">
+            <option value="Anschweissband">Anschweissbänder</option>
+            <option value="Anschraubband">Anschraubbänder</option>
+        </select>
+    </td><td>
+        <select name="anzband">
+            <option value="2">2 Bänder</option>
+            <option value="3">3 Bänder</option>
+        </select>
+    </td></tr>
+</table>
+<br>
+<table>
+    <tr><td>Drücker Bandseite:</td><td>
+        <select name="drueckerband">
+            <option value="kein"> </option>
+            <option value="CNS Drücker">CNS Drücker</option>
+            <option value="CNS Knauf">CNS Knauf</option>
+            <option value="CNS Stossstange">CNS Stossstange</option>
+        </select>
+    </td></tr>
+    <tr><td>Drücker Gegenbandseite:</td><td>
+        <select name="drueckergegenband">
+            <option value="kein"> </option>
+            <option value="CNS Drücker">CNS Drücker</option>
+            <option value="CNS Knauf">CNS Knauf</option>
+            <option value="CNS Stossstange">CNS Stossstange</option>
+        </select>
+    </td></tr>
+</table>
+<br>
+
+<!-- Türschliesser -->
+<table>
+    <tr><td>Türschliesser</td></tr>
+    <tr><td>
+        <select name="tuerschliesser">
+            <option value="kein"> </option>
+            <option value="Türschliesser aufgesetzt Dorma TS93B, Stärke 2-5">Dorma TS 93B</option>
+            <option value="Türschliesser aufgesetzt Dorma TS93G, Stärke 2-5">Dorma TS 93G</option>
+            <option value="Ingetrieter Türschliesser Dorma ITS98, Stärke 3-6">Dorma ITS 98</option>
+        </select>
+    </td><td><input type="checkbox" name="emf"> EMF</td></tr>
+</table>
+<!-- <p><input type="checkbox" name="emf"> EMF (Elektromagnetischer Feststellung)</p> -->
+<br><hr>
+
+<!-- Weitere Beschläge -->
+
+<h3>Weitere Beschläge</h3>
+<p><input type="checkbox" name="magnetkontakt"> Magnetkontakt</p>
+<p><input type="checkbox" name="planet"> Automatische Absenkdichtung</p>
+<p><input type="checkbox" name="haftmagnet"> Haftmagnet</p>
+
+<br>
+<p>Manuelle Eingabe<br><textarea name="eigenertext" cols="50" rows="5"></textarea></p>
+<br><hr>
+
+<h3>Oberfläche</h3>
+<p>Oberfläche: <input name="oberflaeche" value="RAL/NCS __________"></p>
+
+<br>
+
+<p><input type="submit" value="Erstellen"> <input type="reset"></p>
+
+<p>Version: 1.0 - Martin Giang</p>
+
+</form>
+</body>
+</html>

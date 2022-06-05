@@ -492,7 +492,7 @@ if($eloeffner !== "Kein")
     if($schloss == "Einsteckschloss mit oberer Verriegelung")
         {
             echo "2 Stk. - $eloeffner<br>";
-            echo "1 Stk. - Schliessblech für El. Türöffner oben<br>";     
+            echo "1 Stk. - Schliessblech für El. Türöffner oben<br>";
         }
         else
         {
@@ -553,8 +553,6 @@ if($sicherungsbolzen !== 0)
 {
     echo "$sicherungsbolzen Stk. - Sicherungsbolzen<br>";
 }
-else
-{}
 
 
 
@@ -574,9 +572,7 @@ if($drueckerband !== "kein")
 
     if($drueckergegenband !== "kein")
     {
-        if($drueckerband == $drueckergegenband)
-        {}
-        else
+        if($drueckerband !== $drueckergegenband)
         {
             echo "1 Stk. - $drueckergegenband<br>";              
         }
